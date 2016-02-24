@@ -17,9 +17,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    buildTypes.each {
-        it.buildConfigField "String", 'BOOKS_API_KEY', '"http://172.17.3.51:5856"'
-    }
 }
 
 dependencies {

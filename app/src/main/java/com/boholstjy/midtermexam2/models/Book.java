@@ -18,6 +18,9 @@ public class Book {
         this.isRead = isRead;
     }
 
+    public Book() {
+    }
+
     public String getId() {
         return id;
     }

@@ -4,8 +4,6 @@ package com.boholstjy.midtermexam2.utils;
  * Created by Eugene Boholst on 2/23/2016.
  */
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
@@ -113,24 +111,4 @@ public class HttpUtils {
      * @param sUrl the location to where the image is located
      * @return a Bitmap
      */
-    public static Bitmap getImageBitmap(String sUrl) {
-        if (TextUtils.isEmpty(sUrl)) {
-            throw new RuntimeException("Url passed is either null or empty");
-        }
-
-        try {
-            URL url = new URL(sUrl);
-            InputStream inputStream = url.openConnection().getInputStream();
-
-            if (inputStream == null) {
-                return null;
-            }
-
-            return BitmapFactory.decodeStream(inputStream);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return null;
-    }
 }
